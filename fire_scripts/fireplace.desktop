@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Fireplace
+GenericName=Fireplace starter script
+Comment=Autostart the fireplace application
+Exec=/home/jason/fireplace.sh
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true

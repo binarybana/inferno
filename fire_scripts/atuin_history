@@ -1,0 +1,217 @@
+2024-10-06 10:19:49	sudo apt install openssh-server	0s
+2024-10-06 10:19:49	sudo systemctl status openssh	0s
+2024-10-06 10:19:49	sudo systemctl status sshd	0s
+2024-10-06 10:19:49	sudo systemctl status ssh	0s
+2024-10-06 10:19:49	hostname	0s
+2024-10-06 10:19:49	hostnamectl	0s
+2024-10-06 10:19:49	ping calcifer.knights.local	0s
+2024-10-06 10:19:49	ping calcifer.local	0s
+2024-10-06 10:19:49	uname -a	0s
+2024-10-06 10:19:49	sudo apt install curl	0s
+2024-10-06 10:19:49	python	0s
+2024-10-06 10:19:49	python3	0s
+2024-10-06 10:19:49	uvx py-spy	0s
+2024-10-06 10:19:49	curl -LsSf https://astral.sh/uv/install.sh | sh	0s
+2024-10-06 10:19:49	uvx	0s
+2024-10-06 10:19:49	sudo apt install snapshot	0s
+2024-10-06 10:19:49	snapshot	0s
+2024-10-06 10:19:49	ssh-agent	0s
+2024-10-06 10:19:49	eval $(ssh-agent )	0s
+2024-10-06 10:19:49	sudo apt install -y tmux	0s
+2024-10-06 10:19:49	sudo apt install -y git	0s
+2024-10-06 10:19:49	git clone https://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick	0s
+2024-10-06 10:19:49	source $HOME/.bashrc	0s
+2024-10-06 10:19:49	mkdir ~/.ssh	0s
+2024-10-06 10:19:49	homeshick clone git@github.com:binarybana/dotfiles.git	0s
+2024-10-06 10:19:49	curl -sS https://starship.rs/install.sh | sh	0s
+2024-10-06 10:19:49	cat $HOME/.homesick/dotfiles/pkg-list.apt	0s
+2024-10-06 10:19:49	cat $HOME/.homesick/repos/dotfiles/pkg-list.apt	0s
+2024-10-06 10:19:49	sudo apt install (cat $HOME/.homesick/repos/dotfiles/pkg-list.apt)	0s
+2024-10-06 10:19:49	sudo apt install $(cat $HOME/.homesick/repos/dotfiles/pkg-list.apt)	0s
+2024-10-06 10:19:49	sudo apt install fish	0s
+2024-10-06 10:19:49	chsh --shell /bin/fish	0s
+2024-10-06 10:19:49	which fish	0s
+2024-10-06 10:19:49	chsh --shell /usr/bin/fish	0s
+2024-10-06 10:20:01	eval $(ssh-agent -c)	0s
+2024-10-06 10:20:04	ssh-add	0s
+2024-10-06 10:20:09	homeshick cd dotfiles	0s
+2024-10-06 10:20:10	o	0s
+2024-10-06 10:20:43	vim	0s
+2024-10-06 10:21:41	vim instal.sh	0s
+2024-10-06 10:23:10	cat pkg-list-essential.apt	0s
+2024-10-06 10:23:21	vim README.md	0s
+2024-10-06 10:28:42	tmux	0s
+2024-10-06 10:28:53	./install.sh	0s
+2024-10-06 10:29:12	vim install.sh	0s
+2024-10-06 10:31:37	git mv install_phase2.sh  install_extras.sh	0s
+2024-10-06 10:31:43	git add archive.md	0s
+2024-10-06 10:31:48	git add -u .	0s
+2024-10-06 10:31:49	git status --short	0s
+2024-10-06 10:32:03	git commit --message "Direct user to install using install.sh script"	0s
+2024-10-06 10:32:04	git push	0s
+2024-10-06 10:32:36	vim home/.sshconfig	0s
+2024-10-06 10:34:41	o	0s
+2024-10-06 10:34:42	git status --short	0s
+2024-10-06 10:34:45	git add -u .	0s
+2024-10-06 10:34:56	git commit --message "Enhance support for ssh options"	0s
+2024-10-06 10:35:03	cp home/.sshconfig ~/.ssh/config	0s
+2024-10-06 10:35:05	cat ~/.ssh/config	0s
+2024-10-06 10:35:08	git push	0s
+2024-10-06 10:35:14	clea	0s
+2024-10-06 10:35:16	clear	0s
+2024-10-06 10:35:20	./install_interactive.sh	0s
+2024-10-06 10:35:27	atuin	0s
+2024-10-06 10:35:38	cat ~/.config/fish/config.fish	0s
+2024-10-06 10:35:51	atuin	0s
+2024-10-06 10:35:52	atuin	17ms
+2024-10-06 10:35:56	atuin	0s
+2024-10-06 10:36:07	source ~/.config/fish/config.fish	0s
+2024-10-06 10:36:21	vim ~/.config/fish/config.fish	0s
+2024-10-06 10:36:42	which atuin	0s
+2024-10-06 10:36:45	which atuin	0s
+2024-10-06 10:36:45	which atuin	15ms
+2024-10-06 10:37:05	./install_interactive.sh	0s
+2024-10-06 10:37:05	./install_interactive.sh	14s
+2024-10-06 10:37:28	atuin sync	0s
+2024-10-06 10:37:28	atuin sync	1s
+2024-10-06 10:39:05	vim ~/.config/fish/config.fish	0s
+2024-10-06 10:39:05	vim ~/.config/fish/config.fish	0s
+2024-10-06 10:40:03	oo ~/.atuin/bin/	0s
+2024-10-06 10:40:03	oo ~/.atuin/bin/	16ms
+2024-10-06 10:40:17	oo ~/.local/share/atuin/	0s
+2024-10-06 10:40:17	oo ~/.local/share/atuin/	18ms
+2024-10-06 10:40:32	atuin	0s
+2024-10-06 10:40:32	atuin	13ms
+2024-10-06 10:40:41	atuin doctor	0s
+2024-10-06 10:40:41	atuin doctor	120ms
+2024-10-06 10:41:17	echo $ATUIN_SESSION	0s
+2024-10-06 10:41:17	echo $ATUIN_SESSION	13ms
+2024-10-06 10:41:49	atuin history list	0s
+2024-10-06 10:41:49	atuin history list	26ms
+2024-10-06 10:44:13	atuin import -h	0s
+2024-10-06 10:44:13	atuin import -h	17ms
+2024-10-06 10:44:17	atuin import auto	0s
+2024-10-06 10:44:17	atuin import auto	29ms
+2024-10-06 10:45:28	atuin history list	25ms
+2024-10-06 10:45:40	atuin	17ms
+2024-10-06 10:45:54	git diff	40ms
+2024-10-06 10:46:27	cargo-binstall difftastic	7s
+2024-10-06 10:46:39	difft	19ms
+2024-10-06 10:46:53	GIT_EXTERNAL_DIFF=difft git log	1s
+2024-10-06 10:46:57	GIT_EXTERNAL_DIFF=difft git log -p	7s
+2024-10-06 10:47:09	GIT_EXTERNAL_DIFF=difft git log -p --ext-diff	43s
+2024-10-06 10:51:43	sudo apt install vlc	21s
+2024-10-06 10:53:56	apt search looking	526ms
+2024-10-06 10:54:21	lg	74ms
+2024-10-18 17:44:40	ls	13ms
+2024-10-18 17:44:45	rg fireplace.sh	45ms
+2024-10-18 17:44:52	rg fireplace	21ms
+2024-10-18 17:45:02	rg -a fireplace	40ms
+2024-10-18 17:45:04	rg -h	12ms
+2024-10-18 17:51:42	rg --no-ignore fireplace	22ms
+2024-10-18 17:51:50	rg jason	23ms
+2024-10-18 17:51:55	rg jason --no-ignore	18ms
+2024-10-18 17:51:56	rg	13ms
+2024-10-18 17:51:59	rg test	15ms
+2024-10-18 17:52:04	rg firelpca	16ms
+2024-10-18 17:52:06	rg fireplace	19ms
+2024-10-18 17:52:14	glxinfo	89ms
+2024-10-18 17:52:21	lspci -k | grep -EA3 'VGA|3D|Display'	199ms
+2024-10-18 17:52:35	vainfo	80ms
+2024-10-18 17:52:44	sudo apt install mesa-utils vainfo	6s
+2024-10-18 17:52:51	vainfo	47ms
+2024-10-18 17:53:06	glxinfo	13ms
+2024-10-18 18:07:38	ls /usr/include/va/	17ms
+2024-10-18 18:11:48	cargo	71ms
+2024-10-18 18:11:51	rustup	73ms
+2024-10-18 18:12:03	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh	22s
+2024-10-18 18:12:34	cargo binstall	75ms
+2024-10-18 18:14:49	sudo apt install libva-dev	6s
+2024-10-18 18:15:12	cd src	11ms
+2024-10-18 18:15:14	mkdir src	12ms
+2024-10-18 18:15:15	cd src	11ms
+2024-10-18 18:15:25	cargo new --bin calcifer	101ms
+2024-10-18 18:15:28	cd calcifer/	12ms
+2024-10-18 18:15:28	o	24ms
+2024-10-18 18:15:34	vim Cargo.toml	8s
+2024-10-18 18:15:45	vim src/main.rs	1m
+2024-10-18 18:17:38	cargo check	1s
+2024-10-18 18:17:46	sudo apt install pkg-config -y	3s
+2024-10-18 18:17:50	sudo apt install pkg-config -y	386ms
+2024-10-18 18:17:52	cargo check	1s
+2024-10-18 18:23:12	cargo check	146ms
+2024-10-18 18:23:34	cargo check	91ms
+2024-10-18 18:23:38	cargo run	1s
+2024-10-18 18:24:05	vainfo	50ms
+2024-10-18 18:24:31	cargo run	345ms
+2024-10-18 18:25:42	glxinfo	14ms
+2024-10-18 18:27:04	set -gx WAYLAND_DISPLAY wayland-0	11ms
+2024-10-18 18:27:07	glxinfo	19ms
+2024-10-18 18:28:08	glxinfo	405ms
+2024-10-18 18:28:19	echo $DISPLAY	10ms
+2024-10-18 18:28:22	echo $WAYLAND_DISPLAY	12ms
+2024-10-18 18:28:50	set -gx DISPLAY :0	11ms
+2024-10-18 18:28:52	glxinfo	14ms
+2024-10-18 18:29:46	xauth	2s
+2024-10-18 18:29:51	xhost +	18ms
+2024-10-18 18:30:04	xauth list $DISPLAY	14ms
+2024-10-18 18:30:28	weston-info	290ms
+2024-10-18 18:30:35	echo $WAYLAND_DISPLAY	12ms
+2024-10-18 18:30:51	cd src/calcifer/	34ms
+2024-10-18 18:30:53	cargo run	229ms
+2024-10-18 18:31:13	carg orun	87ms
+2024-10-18 18:31:14	cargo run	96ms
+2024-10-18 18:31:54	export LIBVA_DEBUG=1; cargo run	94ms
+2024-10-18 18:32:31	cargo tree	56ms
+2024-10-18 18:34:48	o !	22ms
+2024-10-18 18:34:49	o !	22ms
+2024-10-18 18:34:52	o ~	23ms
+2024-10-18 19:06:06	vim ~/.config/autostart/fireplace.desktop	7s
+2024-10-18 19:06:19	tmux	0s
+2024-10-18 19:06:23	cd	21ms
+2024-10-18 19:06:24	./fireplace.sh	22m
+2024-10-18 19:14:56	xrandr	23ms
+2024-10-18 19:15:43	gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"	35ms
+2024-10-18 19:15:58	gsettings get org.gnome.mutter experimental-features	24ms
+2024-10-18 19:25:44	uvx yt-dlp	2s
+2024-10-18 19:25:52	uvx yt-dlp --help	293ms
+2024-10-18 19:30:07	uvx yt-dlp --list-extractors	368ms
+2024-10-18 19:34:04	uvx yt-dlp https://www.youtube.com/watch?v=qeWLeTQAjzU -o video2 -F	19ms
+2024-10-18 19:34:30	uvx yt-dlp "https://www.youtube.com/watch?v=qeWLeTQAjzU" -o video2 -F	2s
+2024-10-18 19:41:21	uvx yt-dlp "https://www.youtube.com/watch?v=qeWLeTQAjzU" -o video2 --download-sections "*0:00:00-1:00:00"	53m
+2024-10-18 19:42:13	o	21ms
+2024-10-18 19:42:31	mv 4K\ HDR\ Fireplace\ REALTIME\ -\ 6\ Hours\ -\ Relaxing\ Fire\ Burning\ Video\ \&\ Crackling\ Sounds\ -\ NO\ LOOP\ -\ UHD\ \[gB3XH5t9QCA\].webm video1.webm	20ms
+2024-10-18 19:42:35	vim ~/.config/autostart/fireplace.desktop	3s
+2024-10-18 19:42:46	vim ~/.config/autostart/fireplace.desktop	4s
+2024-10-18 19:43:15	rm -rf Documents/ Music/ Pictures/ Public/ Templates/ Videos/	12ms
+2024-10-18 19:43:16	o	12ms
+2024-10-18 19:43:21	mkdir fire_videos	11ms
+2024-10-18 19:43:30	mv video1.webm fire_videos/	12ms
+2024-10-18 19:43:34	vim fireplace.sh	5m
+2024-10-18 19:48:58	./fire	80ms
+2024-10-18 19:49:00	./fireplace.sh	6m
+2024-10-18 19:52:03	uvx yt-dlp "https://www.youtube.com/watch?v=LDL888gcPv8" -o video3 --download-sections "*0:00:00-05:00"	11m
+2024-10-18 19:56:04	vim fireplace.sh	1s
+2024-10-18 19:56:07	cat fire	13ms
+2024-10-18 19:56:09	cat fireplace.sh	12ms
+2024-10-18 19:56:16	mpv --fs https://www.youtube.com/watch?v=RAX_I4AgjiU&pp=ygUPNjBmcHMgZmlyZXBsYWNl	10ms
+2024-10-18 19:56:45	mpv --fs "https://www.youtube.com/watch?v=RAX_I4AgjiU&pp=ygUPNjBmcHMgZmlyZXBsYWNl"	3m
+2024-10-18 20:03:53	o fire_videos/	13ms
+2024-10-18 20:03:55	o	13ms
+2024-10-18 20:04:00	mv video3.webm fire_videos/	12ms
+2024-10-18 20:04:07	./fireplace.sh	52m
+2024-10-18 20:09:50	o	15ms
+2024-10-18 20:09:55	rm -rf mpv-sh*	34ms
+2024-10-18 20:09:56	o	16ms
+2024-10-18 20:56:54	o	14ms
+2024-10-18 20:57:00	mv video2.webm fire_videos/	15ms
+2024-10-18 20:57:02	o fire_videos/	17ms
+2024-10-18 20:57:07	./fireplace.sh	3m
+2024-10-19 17:21:45	./fire	74ms
+2024-10-19 17:21:56	./fireplace.sh	2h
+2024-10-25 17:40:12	./fire	83ms
+2024-10-25 17:40:20	./fireplace.sh	2h
+2024-11-09 13:14:48	vim ~/.bash_history	10s
+2024-11-09 13:15:02	atuin history list	14ms
+2024-11-09 13:15:05	atuin history	32ms
+2024-11-09 13:15:24	atuin history list > atuin_history	0s
