@@ -1,0 +1,10 @@
+[package]
+name = "headless"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.23", features = ["derive"] }
+evdev = "0.12.2"
+input-event-codes = "6.2.0"
+

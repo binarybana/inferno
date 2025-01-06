@@ -54,7 +54,7 @@ async def update_pwm():
     brightess_lut = scale_brightness_data(
         load_brightness_data("packed_brightness.bin"),
         max_brightness=1.0,
-        dynamic_range=0.8,
+        dynamic_range=0.5,
     )
     time_index = 0
     sleep_time = 1 / 60.0
