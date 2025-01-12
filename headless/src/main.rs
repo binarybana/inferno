@@ -1,6 +1,7 @@
 use clap::Parser;
 use std::io::Write;
 use std::os::unix::net::UnixStream;
+use std::time::Duration;
 
 use std::{thread, time};
 
@@ -22,14 +23,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Args::parse();
     thread::sleep(time::Duration::new(1, 0));
     let mut mpv_socket = UnixStream::connect(args.mpv_socket.unwrap_or("/tmp/mpvsocket".into()))?;
-    //let mut mpv_socket = std::fs::OpenOptions::new()
-    //    .read(true)
-    //    .write(true)
-    //    .open(args.mpv_socket.unwrap_or("/tmp/mpvsocket".into()))?;
-
     println!("mpv socket opened.");
 
     // List available devices
+    println!("Listing all available libev devices.");
     for (i, path) in std::fs::read_dir("/dev/input/")?.enumerate() {
         let path = path?.path();
         if path.to_string_lossy().contains("event") {
@@ -40,6 +37,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     // TODO: hardcoded keyboard device here.
+    println!("Opening /dev/input/event3");
     let path = Path::new("/dev/input/event3");
     let mut device = Device::open(path)?;
 
@@ -48,6 +46,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         device.name().unwrap_or("Unknown"),
         path
     );
+
+    let mut heater = HeaterController::new()?;
 
     // Event loop
     loop {
@@ -60,11 +60,58 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     1 => {
                         println!("Key pressed: {:?}", key);
                         mpv_socket.write_all(format!("show-text {:?}/n", key).as_bytes())?;
+                        mpv_socket.flush()?;
+                        match key {
+                            Key::KEY_INSERT => heater.heater_on()?,
+                            Key::KEY_DELETE => heater.heater_off()?,
+                            _ => (),
+                        }
                     }
                     2 => println!("Key repeated: {:?}", key),
                     _ => (),
                 }
             }
         }
+    }
+}
+
+enum HeaterState {
+    Off,
+    On,
+}
+
+struct HeaterController {
+    port: Box<dyn serialport::SerialPort>,
+    state: HeaterState,
+}
+
+impl HeaterController {
+    fn new() -> Result<Self, anyhow::Error> {
+        let mut port = serialport::new("/dev/ttyACM0", 115_200)
+            .timeout(Duration::from_millis(100))
+            .open()
+            .expect("Failed to open port");
+        port.flush()?;
+        Ok(HeaterController {
+            port,
+            state: HeaterState::Off,
+        })
+    }
+
+    fn heater_off(&mut self) -> Result<(), anyhow::Error> {
+        self.port.write_all(b"off\r")?;
+        let mut serial_buf: Vec<u8> = vec![0; 64];
+        self.port.read(serial_buf.as_mut_slice())?;
+        self.state = HeaterState::Off;
+        Ok(())
+    }
+
+    fn heater_on(&mut self) -> Result<(), anyhow::Error> {
+        self.port.write_all(b"on\r")?;
+        let mut serial_buf: Vec<u8> = vec![0; 64];
+        self.port.read(serial_buf.as_mut_slice())?;
+        self.state = HeaterState::On;
+
+        Ok(())
     }
 }

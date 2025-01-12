@@ -33,3 +33,9 @@ print(f"Free storage: {s[0]*s[3]/1024} KB")
 print(f"Memory: {gc.mem_alloc()} of {gc.mem_free()} bytes used.")
 print(f"CPU Freq: {machine.freq()/1000000}Mhz")
 ```
+
+## TODO
+ * Figure out why MPV socket is not working right
+   * Use it for more control
+ * Have an automatic shutoff when the heater is on for more than 4 hours
+ * Automatically 
