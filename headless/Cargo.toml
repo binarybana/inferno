@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1.0.95"
 clap = { version = "4.5.23", features = ["derive"] }
+color-eyre = "0.6"
 evdev = "0.12.2"
 input-event-codes = "6.2.0"
 serialport = "4.6.1"
