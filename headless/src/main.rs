@@ -2,6 +2,7 @@ use clap::Parser;
 use std::io::Write;
 use std::os::unix::net::UnixStream;
 use std::time::Duration;
+use std::process::{Command, Child};
 
 use std::{thread, time};
 
@@ -21,8 +22,15 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Starting headless!");
 
     let args = Args::parse();
-    thread::sleep(time::Duration::new(1, 0));
-    let mut mpv_socket = UnixStream::connect(args.mpv_socket.unwrap_or("/tmp/mpvsocket".into()))?;
+    
+    // Start MPV video playback
+    let socket_path = args.mpv_socket.unwrap_or("/tmp/mpvsocket".into());
+    let _mpv_process = start_video_playback(&socket_path)?;
+    println!("MPV video playback started");
+    
+    // Wait a moment for MPV to start and create the socket
+    thread::sleep(time::Duration::new(2, 0));
+    let mut mpv_socket = UnixStream::connect(&socket_path)?;
     println!("mpv socket opened.");
 
     // List available devices
@@ -73,6 +81,23 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             }
         }
     }
+}
+
+fn start_video_playback(socket_path: &str) -> Result<Child, Box<dyn std::error::Error>> {
+    // Get the home directory for fire_videos path
+    let home_dir = std::env::var("HOME").unwrap_or_else(|_| "/home/jason".to_string());
+    let video_path = format!("{}/fire_videos/*.webm", home_dir);
+    
+    println!("Starting MPV with video path: {}", video_path);
+    
+    let child = Command::new("mpv")
+        .arg("--fs")
+        .arg(format!("--input-ipc-server={}", socket_path))
+        .arg("--loop-file")
+        .arg(&video_path)
+        .spawn()?;
+    
+    Ok(child)
 }
 
 enum HeaterState {
